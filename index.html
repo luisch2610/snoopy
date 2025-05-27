@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Para ti, con Snoopy</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="particles-bg"></canvas>
+    <div class="background-decor"></div>
+    <div class="container card glass animate-in">
+        <div class="neon-border"></div>
+        <img src="https://pngimg.com/d/snoopy_PNG40.png" alt="Snoopy" class="snoopy futuristic-glow animate-in-img">
+        <h1 class="neon-text">🌸 Para ti, <span class="nombre" id="nombre-destino">Lizet</span> 🌸</h1>
+        <p class="intro animate-in">
+            Quería dedicarte esta canción tan especial.<br>
+            Porque como dice Forest Blakk,<br>
+            <em>"If you love her, let her go..."</em>
+        </p>
+        <div class="player animate-in">
+            <button id="play-btn" class="play-btn">▶️ Escuchar canción</button>
+            <div id="yt-player" style="display:none;">
+                <iframe width="300" height="80" src="https://www.youtube.com/embed/1yYV9-KoSUM?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+        <p class="dedicatory animate-in">
+            Espero que te guste tanto como a mí me gustas tú.<br>
+            <strong>Con cariño,<br><span class="firma" id="nombre-firma">Juan Luis</span></strong>
+        </p>
+        <div class="inputs">
+            <input type="text" id="input-destino" placeholder="Nombre de la persona" maxlength="20">
+            <input type="text" id="input-firma" placeholder="Tu nombre" maxlength="20">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
