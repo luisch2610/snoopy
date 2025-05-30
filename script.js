@@ -29,6 +29,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Galería de imágenes
+    const mainSnoopy = document.querySelector('.main-snoopy');
+    const smallSnoopys = document.querySelectorAll('.small-snoopy');
+
+    smallSnoopys.forEach(img => {
+        img.addEventListener('click', () => {
+            const tempSrc = mainSnoopy.src;
+            mainSnoopy.src = img.src;
+            img.src = tempSrc;
+            mainSnoopy.classList.add('rotate-animation');
+            setTimeout(() => mainSnoopy.classList.remove('rotate-animation'), 500);
+        });
+    });
+
     // Partículas animadas (flores/corazones)
     const canvas = document.getElementById('particles-bg');
     const ctx = canvas.getContext('2d');
@@ -42,7 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
         canvas.height = H;
     });
 
-    // Partícula: flor o corazón
     function drawHeart(x, y, size, color, alpha) {
         ctx.save();
         ctx.globalAlpha = alpha;
@@ -78,10 +91,9 @@ document.addEventListener('DOMContentLoaded', () => {
         ctx.restore();
     }
 
-    // Generar partículas
     const particles = [];
     const colors = ['#ffb6b9', '#fcb69f', '#ffe0e9', '#fff6f6', '#f9c6c9'];
-    for(let i=0; i<22; i++) {
+    for(let i=0; i<30; i++) {
         particles.push({
             x: Math.random()*W,
             y: Math.random()*H,
@@ -105,13 +117,14 @@ document.addEventListener('DOMContentLoaded', () => {
             p.y += p.speed;
             p.x += p.drift;
             if(p.y > H + 30) {
-                p.y = -20;
+                p.y = -30;
                 p.x = Math.random()*W;
             }
-            if(p.x < -30) p.x = W+20;
-            if(p.x > W+30) p.x = -20;
+            if(p.x > W + 30) p.x = -30;
+            if(p.x < -30) p.x = W + 30;
         }
         requestAnimationFrame(animateParticles);
     }
+
     animateParticles();
 });

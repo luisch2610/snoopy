@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Para ti, con Snoopy</title>
     <link rel="stylesheet" href="estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
@@ -11,31 +12,46 @@
     <div class="background-decor"></div>
     <div class="container card glass animate-in">
         <div class="neon-border"></div>
-        <img src="https://pngimg.com/d/snoopy_PNG40.png" alt="Snoopy" class="snoopy futuristic-glow animate-in-img">
+        <div class="gallery">
+            <img src="https://pngimg.com/d/snoopy_PNG40.png" alt="Snoopy" class="snoopy futuristic-glow animate-in-img main-snoopy">
+            <div class="small-images">
+                <img src="https://i.pinimg.com/736x/86/9d/1b/869d1b40cff73dfdd52c8fef59bfb804.jpg" alt="Snoopy Corazón" class="small-snoopy">
+                <img src="https://i.pinimg.com/736x/93/9d/44/939d445862a66ec6c2a43a0322a21216.jpg" alt="Snoopy Flores" class="small-snoopy">
+                <img src="https://i.pinimg.com/736x/a0/47/c2/a047c20b2bfccbe9d26acb2b5f43001f.jpg" alt="Snoopy Amor" class="small-snoopy">
+            </div>
+        </div>
+        
         <h1 class="neon-text">🌸 Para ti, <span class="nombre" id="nombre-destino">Lizet</span> 🌸</h1>
-        <p class="intro animate-in">
-            Quería dedicarte esta canción tan especial.<br>
-            Porque como dice Forest Blakk,<br>
-            <em>"She loves her whole family And all of her friends"</em>
-        </p>
+        <div class="message-container">
+            <p class="intro animate-in">
+                Quería dedicarte esta canción tan especial.<br>
+                Porque como dice Forest Blakk,<br>
+                <em class="quote">"She loves her whole family And all of her friends"</em>
+            </p>
+        </div>
+
         <div class="player animate-in">
             <button id="play-btn" class="play-btn">▶️ Escuchar canción</button>
             <audio id="song" style="display:none;">
-                <source src="./song.mp3.unknown" type="audio/mpeg">
+                <source src="./song.mp3" type="audio/mpeg">
                 Tu navegador no soporta el elemento de audio.
             </audio>
         </div>
-        <div id="yt-player" style="display:none;">
-                <iframe width="300" height="80" src="https://www.youtube.com/watch?v=nvSO4sP5yGs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
+
+        <div class="hearts-container">
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
         </div>
+
         <p class="dedicatory animate-in">
             Espero que te guste.<br>
             <strong>Con cariño,<br><span class="firma" id="nombre-firma">Juan Luis</span></strong>
         </p>
+
         <div class="inputs">
-            <input type="text" id="input-destino" placeholder="Lizet" maxlength="20">
-            <input type="text" id="input-firma" placeholder="Luis" maxlength="20">
+            <input type="text" id="input-destino" placeholder="LIZET" maxlength="20">
+            <input type="text" id="input-firma" placeholder="J.LUIS" maxlength="20">
         </div>
     </div>
     <script src="script.js"></script>

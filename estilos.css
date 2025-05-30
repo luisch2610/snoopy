@@ -28,9 +28,10 @@ body {
 .container.card.glass {
     position: relative;
     z-index: 2;
-    margin: 60px auto;
-    max-width: 400px;
-    padding: 2.5rem 2rem 2rem 2rem;
+    margin: 20px auto;
+    max-width: 600px;
+    width: 90%;
+    padding: 2.5rem 2rem;
     border-radius: 2rem;
     background: rgba(255,255,255,0.25);
     box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
@@ -39,6 +40,164 @@ body {
     text-align: center;
     overflow: hidden;
     animation: fadeInUp 1.2s cubic-bezier(.23,1.01,.32,1) both;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.main-snoopy {
+    width: 150px;
+    transition: transform 0.4s cubic-bezier(.23,1.01,.32,1);
+}
+
+.small-images {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.small-snoopy {
+    width: 80px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.small-snoopy:hover {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.message-container {
+    background: rgba(255,255,255,0.3);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 15px rgba(252, 182, 159, 0.2);
+}
+
+.quote {
+    font-size: 1.2rem;
+    color: #ff8ba7;
+    text-shadow: 0 0 5px rgba(255,255,255,0.5);
+}
+
+.hearts-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.heart {
+    width: 20px;
+    height: 20px;
+    background: #ffb6b9;
+    position: relative;
+    transform: rotate(45deg);
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+.heart:before,
+.heart:after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: #ffb6b9;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart:before {
+    left: -10px;
+}
+
+.heart:after {
+    top: -10px;
+}
+
+.play-btn {
+    background: linear-gradient(90deg, #ffb6b9 0%, #fcb69f 100%);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(252, 182, 159, 0.4);
+}
+
+.play-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(252, 182, 159, 0.6);
+}
+
+.inputs input {
+    margin: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border: 2px solid #ffb6b9;
+    border-radius: 1.5rem;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    background: rgba(255,255,255,0.2);
+    color: #4a4a4a;
+    transition: all 0.3s ease;
+}
+
+.inputs input:focus {
+    outline: none;
+    border-color: #fcb69f;
+    background: rgba(255,255,255,0.4);
+    box-shadow: 0 0 10px rgba(252, 182, 159, 0.3);
+}
+
+@keyframes heartbeat {
+    0% { transform: rotate(45deg) scale(1); }
+    25% { transform: rotate(45deg) scale(1.1); }
+    50% { transform: rotate(45deg) scale(1); }
+    75% { transform: rotate(45deg) scale(1.1); }
+    100% { transform: rotate(45deg) scale(1); }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .container.card.glass {
+        margin: 10px auto;
+        padding: 1.5rem 1rem;
+        width: 95%;
+    }
+
+    .main-snoopy {
+        width: 120px;
+    }
+
+    .small-snoopy {
+        width: 60px;
+    }
+
+    .neon-text {
+        font-size: 1.8rem;
+    }
+
+    .play-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
 }
 
 .neon-border {
