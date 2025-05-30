@@ -20,7 +20,12 @@
         </p>
         <div class="player animate-in">
             <button id="play-btn" class="play-btn">▶️ Escuchar canción</button>
-            <div id="yt-player" style="display:none;">
+            <audio id="song" style="display:none;">
+                <source src="./song.mp3.unknown" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+        <div id="yt-player" style="display:none;">
                 <iframe width="300" height="80" src="https://www.youtube.com/watch?v=nvSO4sP5yGs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
         </div>
@@ -29,8 +34,8 @@
             <strong>Con cariño,<br><span class="firma" id="nombre-firma">Juan Luis</span></strong>
         </p>
         <div class="inputs">
-            <input type="text" id="input-destino" placeholder="Nombre de la persona" maxlength="20">
-            <input type="text" id="input-firma" placeholder="Tu nombre" maxlength="20">
+            <input type="text" id="input-destino" placeholder="Lizet" maxlength="20">
+            <input type="text" id="input-firma" placeholder="Luis" maxlength="20">
         </div>
     </div>
     <script src="script.js"></script>

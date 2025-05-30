@@ -14,12 +14,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Botón de reproducir música
     const playBtn = document.getElementById('play-btn');
-    const ytPlayer = document.getElementById('yt-player');
+    const song = document.getElementById('song');
     let played = false;
+    
     playBtn.addEventListener('click', () => {
-        ytPlayer.style.display = 'block';
-        playBtn.style.display = 'none';
-        played = true;
+        if (!played) {
+            song.play();
+            playBtn.textContent = '⏸️ Pausar canción';
+            played = true;
+        } else {
+            song.pause();
+            playBtn.textContent = '▶️ Escuchar canción';
+            played = false;
+        }
     });
 
     // Partículas animadas (flores/corazones)
