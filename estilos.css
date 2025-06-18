@@ -3,7 +3,7 @@ body {
     padding: 0;
     min-height: 100vh;
     font-family: 'Quicksand', Arial, sans-serif;
-    background: linear-gradient(135deg, #f8fafc 0%, #e0c3fc 100%);
+    background: linear-gradient(135deg, #f8fafc 0%, #c3ccfc 100%);
     overflow-x: hidden;
     position: relative;
 }
@@ -82,7 +82,7 @@ body {
 
 .quote {
     font-size: 1.2rem;
-    color: #ff8ba7;
+    color: #1c1d5e;
     text-shadow: 0 0 5px rgba(255,255,255,0.5);
 }
 
@@ -96,7 +96,7 @@ body {
 .heart {
     width: 20px;
     height: 20px;
-    background: #ffb6b9;
+    background: #b74747;
     position: relative;
     transform: rotate(45deg);
     animation: heartbeat 1.5s ease-in-out infinite;
@@ -107,7 +107,7 @@ body {
     content: '';
     width: 20px;
     height: 20px;
-    background: #ffb6b9;
+    background: #b74747;
     border-radius: 50%;
     position: absolute;
 }
@@ -129,7 +129,7 @@ body {
     font-size: 1.2rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(252, 182, 159, 0.4);
+    box-shadow: 0 4px 15px rgba(237, 1, 1, 0.4);
 }
 
 .play-btn:hover {
@@ -187,7 +187,7 @@ body {
     }
 
     .small-snoopy {
-        width: 60px;
+        width: 70px;
     }
 
     .neon-text {
@@ -215,7 +215,7 @@ body {
     width: 120px;
     margin: 0 auto 1rem auto;
     display: block;
-    filter: drop-shadow(0 0 12px #fff7);
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.467));
     transition: transform 0.4s cubic-bezier(.23,1.01,.32,1);
 }
 .snoopy:hover {
@@ -229,7 +229,7 @@ body {
 .neon-text {
     font-family: 'Pacifico', cursive;
     font-size: 2.2rem;
-    color: #ffb6b9;
+    color: #cb0007;
     text-shadow: 0 0 8px #fff, 0 0 18px #fcb69f;
     margin-bottom: 0.5rem;
     letter-spacing: 1px;
@@ -237,16 +237,16 @@ body {
 
 .intro, .dedicatory {
     font-size: 1.1rem;
-    color: #4a4a4a;
+    color: #000000;
     margin: 1rem 0;
     background: rgba(255,255,255,0.5);
     border-radius: 1rem;
     padding: 0.7rem 1rem;
-    box-shadow: 0 2px 8px #fcb69f33;
+    box-shadow: 0 2px 8px #fc9f9f33;
 }
 
 .dedicatory strong {
-    color: #ffb6b9;
+    color: #b7151a;
     font-family: 'Pacifico', cursive;
     font-size: 1.1rem;
 }
@@ -309,7 +309,7 @@ body {
     font-size: 1rem;
     font-family: 'Quicksand', sans-serif;
     outline: none;
-    background: rgba(255,255,255,0.7);
+    background: rgba(211, 123, 123, 0.283);
     box-shadow: 0 1px 4px #fcb69f22;
     transition: border 0.2s;
 }
@@ -350,9 +350,9 @@ body {
 
 ::-webkit-scrollbar {
     width: 8px;
-    background: #fcb69f22;
+    background: #dd91c83a;
 }
 ::-webkit-scrollbar-thumb {
-    background: #ffb6b9;
+    background: #7a0a0e;
     border-radius: 8px;
 }
